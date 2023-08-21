@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "2654DA32-CCBE-48D0-89CA-A7EBF32D2F8B",
+      "name" : "Test Scheme Action",
+      "options" : {
+        "maximumTestRepetitions" : 1000,
+        "testRepetitionMode" : "fixedIterations"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ActorDemo.xcodeproj",
+      "identifier" : "77F57B772A94144300852C88",
+      "name" : "ActorDemo"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ActorDemo.xcodeproj",
+        "identifier" : "77F57B882A94144500852C88",
+        "name" : "ActorDemoTests"
+      }
+    }
+  ],
+  "version" : 1
+}

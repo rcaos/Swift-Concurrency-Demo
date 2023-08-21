@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ActorDemoApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      if _XCTIsTesting {
+        EmptyView()
+      } else {
+        ContentView()
+      }
     }
+  }
 }
