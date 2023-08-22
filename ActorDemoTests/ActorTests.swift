@@ -32,13 +32,17 @@ final class ActorTests: XCTestCase {
 
     let sut = MutableActor()
 
-    _ = await withThrowingTaskGroup(of: Int.self) { group in
+    _ = try await withThrowingTaskGroup(of: Int.self) { group in
       for index in 1...expectedValue {
         group.addTask {
           try await Task.sleep(nanoseconds: UInt64(arc4random() % 1000) )
           try await sut.increment(index)
           return index
         }
+      }
+
+      for try await result in group {
+        _ = result
       }
     }
 
