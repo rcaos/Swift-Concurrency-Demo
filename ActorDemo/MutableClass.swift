@@ -11,8 +11,9 @@ public class MutableClass {
     self.counter = counter
   }
 
-  public func increment() {
+  public func increment(_ index: Int) {
     let currentCount = counter
     counter = currentCount + 1
+    print("🚨Counter: \(counter) index Task: \(index)", { Thread.current }())
   }
 }
