@@ -4,7 +4,7 @@
 
 import Foundation
 
-public actor MutableActorClass {
+public actor MutableActor {
   public var counter = 0
 
   public init(counter: Int = 0) {
