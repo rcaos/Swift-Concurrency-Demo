@@ -14,7 +14,25 @@ final class ActorDemoTests: XCTestCase {
       sut.increment()
     }
 
-    print(sut.counter)
+    XCTAssertEqual(sut.counter, 1000)
+  }
+
+  func testCounter2() throws {
+    let group = DispatchGroup()
+    let sut = MutableClass()
+
+    for _ in 0...999 {
+      group.enter()
+
+      DispatchQueue.global().async {
+        usleep(arc4random() % 1000)
+        sut.increment()
+        group.leave()
+      }
+    }
+
+    let result = group.wait(timeout: DispatchTime.now() + 5)
+    XCTAssert(result == .success)
     XCTAssertEqual(sut.counter, 1000)
   }
 }
