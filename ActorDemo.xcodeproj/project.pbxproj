@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771D93592A951E56004C4DA3 /* MutableCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D93582A951E56004C4DA3 /* MutableCollections.swift */; };
+		771D935B2A951E78004C4DA3 /* MutableCollectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */; };
+		771D935D2A9521DD004C4DA3 /* MutableCollectionActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */; };
+		771D935F2A952208004C4DA3 /* ActorCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */; };
 		77476B7C2A95131B00BA0EF1 /* ActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77476B7B2A95131B00BA0EF1 /* ActorTests.swift */; };
 		77753DB02A9508F500C30F16 /* TaskPriority+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */; };
 		77753DB22A95091200C30F16 /* MutableActorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77753DB12A95091200C30F16 /* MutableActorClass.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		771D93582A951E56004C4DA3 /* MutableCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollections.swift; sourceTree = "<group>"; };
+		771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionsTests.swift; sourceTree = "<group>"; };
+		771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionActor.swift; sourceTree = "<group>"; };
+		771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCollectionTests.swift; sourceTree = "<group>"; };
 		77476B7B2A95131B00BA0EF1 /* ActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTests.swift; sourceTree = "<group>"; };
 		77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskPriority+Random.swift"; sourceTree = "<group>"; };
 		77753DB12A95091200C30F16 /* MutableActorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableActorClass.swift; sourceTree = "<group>"; };
@@ -89,6 +97,8 @@
 				77F57B7D2A94144300852C88 /* ContentView.swift */,
 				77F57BA62A9415A400852C88 /* MutableClass.swift */,
 				77753DB12A95091200C30F16 /* MutableActorClass.swift */,
+				771D93582A951E56004C4DA3 /* MutableCollections.swift */,
+				771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */,
 				77F57BA82A94191E00852C88 /* IsTesting.swift */,
 				77F57B7F2A94144500852C88 /* Assets.xcassets */,
 				77F57B812A94144500852C88 /* ActorDemo.entitlements */,
@@ -110,7 +120,9 @@
 			children = (
 				77F57BAA2A941ACD00852C88 /* ActorDemo.xctestplan */,
 				77F57B8D2A94144500852C88 /* MutableClassTests.swift */,
+				771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */,
 				77476B7B2A95131B00BA0EF1 /* ActorTests.swift */,
+				771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */,
 				77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */,
 			);
 			path = ActorDemoTests;
@@ -216,6 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771D93592A951E56004C4DA3 /* MutableCollections.swift in Sources */,
+				771D935D2A9521DD004C4DA3 /* MutableCollectionActor.swift in Sources */,
 				77F57BA92A94191E00852C88 /* IsTesting.swift in Sources */,
 				77753DB22A95091200C30F16 /* MutableActorClass.swift in Sources */,
 				77F57BA72A9415A400852C88 /* MutableClass.swift in Sources */,
@@ -230,6 +244,8 @@
 			files = (
 				77476B7C2A95131B00BA0EF1 /* ActorTests.swift in Sources */,
 				77F57B8E2A94144500852C88 /* MutableClassTests.swift in Sources */,
+				771D935F2A952208004C4DA3 /* ActorCollectionTests.swift in Sources */,
+				771D935B2A951E78004C4DA3 /* MutableCollectionsTests.swift in Sources */,
 				77753DB02A9508F500C30F16 /* TaskPriority+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
