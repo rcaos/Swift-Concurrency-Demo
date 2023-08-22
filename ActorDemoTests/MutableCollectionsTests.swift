@@ -76,7 +76,7 @@ final class MutableDictionaryTests: XCTestCase {
 }
 
 
-private func randomKey() -> String {
-  let randomValue = Int.random(in: 1...10000)
+public func randomKey() -> String {
+  let randomValue = Int.random(in: 1...1_000_000_000_000)
   return "key\(randomValue)"
 }
