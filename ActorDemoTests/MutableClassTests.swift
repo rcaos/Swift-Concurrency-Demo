@@ -35,4 +35,24 @@ final class ActorDemoTests: XCTestCase {
     XCTAssert(result == .success)
     XCTAssertEqual(sut.counter, 1000)
   }
+
+  func testCounter3() async throws {
+    let sut = MutableActorClass()
+
+    let expectedValue = 1000
+
+    let tasks = (1...expectedValue).map { index in
+      return Task(priority: .random) {
+        try await Task.sleep(nanoseconds: UInt64(arc4random() % 1000) )
+        try await sut.increment(index)
+      }
+    }
+
+    for task in tasks {
+      try await task.value
+    }
+
+    let value = await sut.counter
+    XCTAssertEqual(value, expectedValue)
+  }
 }
