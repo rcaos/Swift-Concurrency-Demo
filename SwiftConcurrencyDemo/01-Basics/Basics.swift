@@ -7,7 +7,7 @@ import SwiftUI
 
 struct Basics01: View {
 
-  @State var model = Basics01Model()
+  var model = Basics01Model()
 
   var body: some View {
     Section {
