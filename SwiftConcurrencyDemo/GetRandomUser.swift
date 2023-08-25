@@ -6,6 +6,8 @@ import Foundation
 
 public func fetchRandomUser() async -> User? {
   do {
+    try await Task.sleep(for: .seconds(1))
+
     let randomUserId = Int.random(in: 1...12)
     let url = URL(string: "https://reqres.in/api/users/\(randomUserId)")!
     let (data, _) = try await URLSession.shared.data(from: url)
