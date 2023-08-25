@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77F57B772A94144300852C88"
-               BuildableName = "ActorDemo.app"
-               BlueprintName = "ActorDemo"
-               ReferencedContainer = "container:ActorDemo.xcodeproj">
+               BuildableName = "SwiftConcurrencyDemo.app"
+               BlueprintName = "SwiftConcurrencyDemo"
+               ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77F57B882A94144500852C88"
-               BuildableName = "ActorDemoTests.xctest"
-               BlueprintName = "ActorDemoTests"
-               ReferencedContainer = "container:ActorDemo.xcodeproj">
+               BuildableName = "SwiftConcurrencyDemoTests.xctest"
+               BlueprintName = "SwiftConcurrencyDemoTests"
+               ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -54,9 +54,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77F57B882A94144500852C88"
-               BuildableName = "ActorDemoTests.xctest"
-               BlueprintName = "ActorDemoTests"
-               ReferencedContainer = "container:ActorDemo.xcodeproj">
+               BuildableName = "SwiftConcurrencyDemoTests.xctest"
+               BlueprintName = "SwiftConcurrencyDemoTests"
+               ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -67,7 +67,7 @@
                BlueprintIdentifier = "77F57B922A94144500852C88"
                BuildableName = "ActorDemoUITests.xctest"
                BlueprintName = "ActorDemoUITests"
-               ReferencedContainer = "container:ActorDemo.xcodeproj">
+               ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -87,9 +87,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77F57B772A94144300852C88"
-            BuildableName = "ActorDemo.app"
-            BlueprintName = "ActorDemo"
-            ReferencedContainer = "container:ActorDemo.xcodeproj">
+            BuildableName = "SwiftConcurrencyDemo.app"
+            BlueprintName = "SwiftConcurrencyDemo"
+            ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -104,9 +104,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77F57B772A94144300852C88"
-            BuildableName = "ActorDemo.app"
-            BlueprintName = "ActorDemo"
-            ReferencedContainer = "container:ActorDemo.xcodeproj">
+            BuildableName = "SwiftConcurrencyDemo.app"
+            BlueprintName = "SwiftConcurrencyDemo"
+            ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

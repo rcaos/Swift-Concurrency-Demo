@@ -3,7 +3,7 @@
 //
 
 import XCTest
-import ActorDemo
+import SwiftConcurrencyDemo
 
 final class ActorTests: XCTestCase {
 

@@ -5,7 +5,7 @@
 import Foundation
 
 import XCTest
-import ActorDemo
+import SwiftConcurrencyDemo
 
 final class ActorCollectionTests: XCTestCase {
 

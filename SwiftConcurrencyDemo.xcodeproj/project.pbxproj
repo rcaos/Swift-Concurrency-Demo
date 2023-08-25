@@ -41,13 +41,13 @@
 		77476B7B2A95131B00BA0EF1 /* ActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTests.swift; sourceTree = "<group>"; };
 		77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskPriority+Random.swift"; sourceTree = "<group>"; };
 		77753DB12A95091200C30F16 /* MutableActorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableActorClass.swift; sourceTree = "<group>"; };
-		77F57B782A94144300852C88 /* ActorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F57B782A94144300852C88 /* SwiftConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F57B7B2A94144300852C88 /* ActorDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDemoApp.swift; sourceTree = "<group>"; };
 		77F57B7D2A94144300852C88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		77F57B7F2A94144500852C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77F57B812A94144500852C88 /* ActorDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActorDemo.entitlements; sourceTree = "<group>"; };
 		77F57B832A94144500852C88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		77F57B892A94144500852C88 /* ActorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F57B892A94144500852C88 /* SwiftConcurrencyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F57B8D2A94144500852C88 /* MutableClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableClassTests.swift; sourceTree = "<group>"; };
 		77F57BA62A9415A400852C88 /* MutableClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableClass.swift; sourceTree = "<group>"; };
 		77F57BA82A94191E00852C88 /* IsTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsTesting.swift; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		77F57B792A94144300852C88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77F57B782A94144300852C88 /* ActorDemo.app */,
-				77F57B892A94144500852C88 /* ActorDemoTests.xctest */,
+				77F57B782A94144300852C88 /* SwiftConcurrencyDemo.app */,
+				77F57B892A94144500852C88 /* SwiftConcurrencyDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77F57B772A94144300852C88 /* ActorDemo */ = {
+		77F57B772A94144300852C88 /* SwiftConcurrencyDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F57B9D2A94144500852C88 /* Build configuration list for PBXNativeTarget "ActorDemo" */;
+			buildConfigurationList = 77F57B9D2A94144500852C88 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemo" */;
 			buildPhases = (
 				77F57B742A94144300852C88 /* Sources */,
 				77F57B752A94144300852C88 /* Frameworks */,
@@ -143,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = ActorDemo;
+			name = SwiftConcurrencyDemo;
 			productName = ActorDemo;
-			productReference = 77F57B782A94144300852C88 /* ActorDemo.app */;
+			productReference = 77F57B782A94144300852C88 /* SwiftConcurrencyDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77F57B882A94144500852C88 /* ActorDemoTests */ = {
+		77F57B882A94144500852C88 /* SwiftConcurrencyDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F57BA02A94144500852C88 /* Build configuration list for PBXNativeTarget "ActorDemoTests" */;
+			buildConfigurationList = 77F57BA02A94144500852C88 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemoTests" */;
 			buildPhases = (
 				77F57B852A94144500852C88 /* Sources */,
 				77F57B862A94144500852C88 /* Frameworks */,
@@ -161,9 +161,9 @@
 			dependencies = (
 				77F57B8B2A94144500852C88 /* PBXTargetDependency */,
 			);
-			name = ActorDemoTests;
+			name = SwiftConcurrencyDemoTests;
 			productName = ActorDemoTests;
-			productReference = 77F57B892A94144500852C88 /* ActorDemoTests.xctest */;
+			productReference = 77F57B892A94144500852C88 /* SwiftConcurrencyDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77F57B732A94144300852C88 /* Build configuration list for PBXProject "ActorDemo" */;
+			buildConfigurationList = 77F57B732A94144300852C88 /* Build configuration list for PBXProject "SwiftConcurrencyDemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -198,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77F57B772A94144300852C88 /* ActorDemo */,
-				77F57B882A94144500852C88 /* ActorDemoTests */,
+				77F57B772A94144300852C88 /* SwiftConcurrencyDemo */,
+				77F57B882A94144500852C88 /* SwiftConcurrencyDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,7 +255,7 @@
 /* Begin PBXTargetDependency section */
 		77F57B8B2A94144500852C88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77F57B772A94144300852C88 /* ActorDemo */;
+			target = 77F57B772A94144300852C88 /* SwiftConcurrencyDemo */;
 			targetProxy = 77F57B8A2A94144500852C88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -470,7 +470,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActorDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ActorDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyDemo";
 			};
 			name = Debug;
 		};
@@ -493,14 +493,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActorDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ActorDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77F57B732A94144300852C88 /* Build configuration list for PBXProject "ActorDemo" */ = {
+		77F57B732A94144300852C88 /* Build configuration list for PBXProject "SwiftConcurrencyDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F57B9B2A94144500852C88 /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F57B9D2A94144500852C88 /* Build configuration list for PBXNativeTarget "ActorDemo" */ = {
+		77F57B9D2A94144500852C88 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F57B9E2A94144500852C88 /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F57BA02A94144500852C88 /* Build configuration list for PBXNativeTarget "ActorDemoTests" */ = {
+		77F57BA02A94144500852C88 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F57BA12A94144500852C88 /* Debug */,
