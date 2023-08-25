@@ -4,7 +4,7 @@
 
 import Foundation
 
-public func getRandomUser() async -> User? {
+public func fetchRandomUser() async -> User? {
   do {
     let randomUserId = Int.random(in: 1...12)
     let url = URL(string: "https://reqres.in/api/users/\(randomUserId)")!

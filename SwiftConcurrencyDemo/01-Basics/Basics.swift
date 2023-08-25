@@ -13,7 +13,7 @@ struct Basics01: View {
     Section {
       Button("👉 Get Random User", action: {
         Task {
-          await model.toTask()
+          await model.getRandomUser()
         }
       })
       .padding()
@@ -32,8 +32,8 @@ struct Basics01: View {
 @Observable class Basics01Model {
   var user: User?
 
-  func toTask() async {
-    user = await getRandomUser()
+  func getRandomUser() async {
+    user = await fetchRandomUser()
   }
 }
 
