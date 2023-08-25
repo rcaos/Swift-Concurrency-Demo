@@ -72,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77CF3D052A994ADB001E05AE /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				77F57BA62A9415A400852C88 /* MutableClass.swift */,
+				77753DB12A95091200C30F16 /* MutableActorClass.swift */,
+				771D93582A951E56004C4DA3 /* MutableCollections.swift */,
+				771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */,
+			);
+			path = Actor;
+			sourceTree = "<group>";
+		};
 		77F57B6F2A94144300852C88 = {
 			isa = PBXGroup;
 			children = (
@@ -93,12 +104,9 @@
 		77F57B7A2A94144300852C88 /* SwiftConcurrencyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				77CF3D052A994ADB001E05AE /* Actor */,
 				77F57B7B2A94144300852C88 /* ActorDemoApp.swift */,
 				77F57B7D2A94144300852C88 /* ContentView.swift */,
-				77F57BA62A9415A400852C88 /* MutableClass.swift */,
-				77753DB12A95091200C30F16 /* MutableActorClass.swift */,
-				771D93582A951E56004C4DA3 /* MutableCollections.swift */,
-				771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */,
 				77F57BA82A94191E00852C88 /* IsTesting.swift */,
 				77F57B7F2A94144500852C88 /* Assets.xcassets */,
 				77F57B812A94144500852C88 /* ActorDemo.entitlements */,
