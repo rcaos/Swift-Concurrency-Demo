@@ -8,13 +8,13 @@
 import SwiftUI
 
 @main
-struct ActorDemoApp: App {
+struct SwiftConcurrencyDemoApp: App {
   var body: some Scene {
     WindowGroup {
       if _XCTIsTesting {
         EmptyView()
       } else {
-        ContentView()
+        RootView()
       }
     }
   }
