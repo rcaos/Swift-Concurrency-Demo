@@ -18,6 +18,10 @@ struct Basics01: View {
       })
       .padding()
 
+      if model.isRequestingUser {
+        ProgressView()
+      }
+
       if let user = model.user {
         Text("📝 Name: \(user.name)")
         Text("📩 Email: \(user.email)")
@@ -31,9 +35,16 @@ struct Basics01: View {
 
 @Observable class Basics01Model {
   var user: User?
+  var isRequestingUser = false
 
   func getRandomUser() async {
+    isRequestingUser = true
     user = await fetchRandomUser()
+    isRequestingUser = false
+  }
+
+  deinit {
+    print("deinit: \(Self.self)")
   }
 }
 
