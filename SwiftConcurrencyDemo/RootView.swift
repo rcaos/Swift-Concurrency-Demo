@@ -13,6 +13,9 @@ struct RootView: View {
           NavigationLink("Basic", destination: {
             Basics01()
           })
+          NavigationLink("AsyncStream", destination: {
+            AsyncStream02()
+          })
         }, header: {
           Text("Getting Started")
         })
