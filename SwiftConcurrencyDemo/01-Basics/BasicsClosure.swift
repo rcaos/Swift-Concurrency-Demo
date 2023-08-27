@@ -5,6 +5,7 @@
 import Foundation
 import SwiftUI
 import NotificationCenter
+import CoreLocation
 
 struct Basic02View: View {
 
@@ -34,17 +35,22 @@ struct Basic02View: View {
   }
 }
 
-import CoreLocation
-
 @Observable class Basics02Model {
 
   var isRequestOnFlight = false
   var devicePermissions: DevicePermissions?
 
   func getRandomUser() async {
-    isRequestOnFlight = true
-    devicePermissions = await notificationSettings()
-    isRequestOnFlight = false
+    devicePermissions = nil
+
+    do {
+      isRequestOnFlight = true
+      try await Task.sleep(nanoseconds: 1_000_000_000)
+      devicePermissions = await notificationSettings()
+      isRequestOnFlight = false
+    } catch {
+      isRequestOnFlight = false
+    }
   }
 
   deinit {
@@ -57,8 +63,7 @@ struct DevicePermissions {
   let locationStatus: CLAuthorizationStatus
 }
 
-@available(*, deprecated, message: "Use Async version instead")
-/// An old implementation that is used in many places
+@available(*, deprecated, message: "Use Async version instead, Don't remove yet this cose is use in many places")
 func getNotificationSettings(completion: @escaping (DevicePermissions) -> Void ) {
   UNUserNotificationCenter.current().getNotificationSettings(completionHandler: {
     completion(
