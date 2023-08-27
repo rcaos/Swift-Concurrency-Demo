@@ -100,10 +100,6 @@ final class DownloadService {
   func download(_ url: URL) async throws -> AsyncThrowingStream<DownloadProgress, Error> {
     return AsyncThrowingStream<DownloadProgress, Error> { continuation in
 
-      continuation.onTermination = { b in
-        print("Download stream finish")
-      }
-
       let request = URLRequest(url: url)
       let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         if error != nil {
@@ -115,7 +111,12 @@ final class DownloadService {
         }
       }
 
-      self.observer = task.progress.observe(\.fractionCompleted) { progress, _ in
+      continuation.onTermination = { b in
+        print("Download stream finish")
+        task.cancel()
+      }
+
+      observer = task.progress.observe(\.fractionCompleted) { progress, _ in
         continuation.yield(.loading(progress.fractionCompleted))
       }
       task.resume()
