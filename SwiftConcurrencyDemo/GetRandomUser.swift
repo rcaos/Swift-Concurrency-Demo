@@ -4,14 +4,27 @@
 
 import Foundation
 
-public func fetchRandomUser() async -> User? {
+#warning("remove it")
+func foo() async {
+  print("Start download image")
   do {
-    try await Task.sleep(for: .seconds(1))
+    let url = URL(string: "https://apod.nasa.gov/apod/image/2308/SeasonSaturnapodacasely.jpg")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    print("Bytes: \(ByteCountFormatter().string(fromByteCount: Int64(data.count)))")
+  } catch  {
+  }
+}
 
-    let randomUserId = Int.random(in: 1...12)
+public func fetchRandomUser() async -> User? {
+  let randomUserId = Int.random(in: 1...12)
+  print("🙅‍♂️ I will Request a random user with ID: \(randomUserId)")
+
+  do {
+    try await Task.sleep(for: .seconds(4))
     let url = URL(string: "https://reqres.in/api/users/\(randomUserId)")!
     let (data, _) = try await URLSession.shared.data(from: url)
     let response = try JSONDecoder().decode(RandomUserResponse.self, from: data)
+    print("🙅‍♂️ Random user: \(response)")
     return response.toDomain()
   } catch {
     print("\(error.localizedDescription)")
@@ -19,6 +32,13 @@ public func fetchRandomUser() async -> User? {
   }
 }
 
+public struct User {
+  public let id: Int
+  public let name: String
+  public let email: String
+}
+
+// MARK: - Private
 private struct RandomUserResponse: Decodable {
   private let data: UserDTO
 
@@ -43,10 +63,4 @@ private struct RandomUserResponse: Decodable {
       email: data.email
     )
   }
-}
-
-public struct User {
-  public let id: Int
-  public let name: String
-  public let email: String
 }
