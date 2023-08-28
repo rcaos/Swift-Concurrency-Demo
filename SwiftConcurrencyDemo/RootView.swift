@@ -16,18 +16,25 @@ struct RootView: View {
           NavigationLink("Basic 02", destination: {
             Basic02View()
           })
-          NavigationLink("Basic - Delegate", destination: {
-            BasicsContinuationView()
-          })
+        }, header: {
+          Text("Getting Started")
+        })
+
+        Section(content: {
           NavigationLink("AsyncStream", destination: {
             AsyncStream02()
           })
           NavigationLink("AsyncStreamURL", destination: {
             AsyncStreamURLView()
           })
-        }, header: {
-          Text("Getting Started")
+          NavigationLink("AsyncStream - Delegate", destination: {
+            BasicsContinuationView()
+          })
+        } , header: {
+          Text("Async Stream")
         })
+
+
       }
       .navigationTitle("Swift Concurrency")
     }
