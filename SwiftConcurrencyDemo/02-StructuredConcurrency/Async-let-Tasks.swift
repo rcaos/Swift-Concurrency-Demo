@@ -78,18 +78,9 @@ struct AsyncLetModel {
     async let fact = getNumberFact(Int.random(in: 1...200))
 
     // 🚨 The two request are running in parallel
-//    state.user = await user
-//
-////    do {
-////      try await Task.sleep(for: .seconds(2))
-////    } catch {
-////    }
-//    // Si llego aquí si reenderiza
-//
-//    state.fact = await fact
-
-    state.fact = await fact
-    state.user = await user
+    let (responseFact, responseUser) = await (fact, user)
+    state.fact = responseFact
+    state.user = responseUser
 
     state.isRequesting = false
   }
