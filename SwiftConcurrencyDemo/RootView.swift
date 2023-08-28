@@ -33,8 +33,6 @@ struct RootView: View {
         } , header: {
           Text("Async Stream")
         })
-
-
       }
       .navigationTitle("Swift Concurrency")
     }
