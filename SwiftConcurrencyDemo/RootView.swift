@@ -21,7 +21,7 @@ struct RootView: View {
         })
 
         Section(content: {
-          NavigationLink("AsyncStream", destination: {
+          NavigationLink("AsyncStream - Unfolding", destination: {
             AsyncStream02()
           })
           NavigationLink("AsyncStreamURL", destination: {
