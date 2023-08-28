@@ -16,6 +16,9 @@ struct RootView: View {
           NavigationLink("Basic 02", destination: {
             Basic02View()
           })
+          NavigationLink("Basic - Delegate", destination: {
+            BasicsContinuationView()
+          })
           NavigationLink("AsyncStream", destination: {
             AsyncStream02()
           })
