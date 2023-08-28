@@ -46,7 +46,11 @@ struct Basic02View: View {
     do {
       isRequestOnFlight = true
       try await Task.sleep(nanoseconds: 1_000_000_000)
+
+      /// Step 02: Now you can use ``await``
+      /// The previous implementation was based on Closures
       devicePermissions = await notificationSettings()
+
       isRequestOnFlight = false
     } catch {
       isRequestOnFlight = false
@@ -76,6 +80,8 @@ func getNotificationSettings(completion: @escaping (DevicePermissions) -> Void )
 }
 
 func notificationSettings() async -> DevicePermissions {
+  /// Step 01: Use ``withCheckedContinuation`` to wrap a closure implementation
+
   return await withCheckedContinuation { continuation in
     getNotificationSettings {
       continuation.resume(returning: $0)

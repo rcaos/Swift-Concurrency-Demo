@@ -97,6 +97,8 @@ final class DownloadService {
 
   init() { }
 
+  /// 🚨 You can't declare de AsyncStream using ``DownloadError``
+  /// AsyncThrowingStream<DownloadProgress, DownloadError> 🚫 👈 This won't compile
   func download(_ url: URL) async throws -> AsyncThrowingStream<DownloadProgress, Error> {
     return AsyncThrowingStream<DownloadProgress, Error> { continuation in
 
