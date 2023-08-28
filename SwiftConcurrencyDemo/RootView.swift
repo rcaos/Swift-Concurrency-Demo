@@ -21,6 +21,14 @@ struct RootView: View {
         })
 
         Section(content: {
+          NavigationLink("Async-let Tasks", destination: {
+            AsyncLetTasksView()
+          })
+        }, header: {
+          Text("Structured Concurrency")
+        })
+
+        Section(content: {
           NavigationLink("AsyncStream - Unfolding", destination: {
             AsyncStream02()
           })
