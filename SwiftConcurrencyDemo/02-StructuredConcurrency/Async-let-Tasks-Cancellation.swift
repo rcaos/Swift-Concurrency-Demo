@@ -78,7 +78,9 @@ struct AsyncLetTasksCancellationView: View {
         state.user = responseUser
       } catch {
         print("Error Model: \(error)")
-        state.showAlert = true
+        if Task.isCancelled == false {
+          state.showAlert = true
+        }
       }
       state.isRequesting = false
     }
