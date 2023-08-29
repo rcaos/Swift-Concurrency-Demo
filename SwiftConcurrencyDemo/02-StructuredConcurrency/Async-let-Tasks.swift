@@ -87,6 +87,8 @@ struct AsyncLetModel {
     async let fact = getNumberFact(Int.random(in: 1...200))
 
     do {
+      // A task parent-child link enforces a rule that says a parent task can only finish its work if all of its child tasks have finished
+      // The tree is responsible to cancel other child tasks
       // If one Child Task throws an error, The other child Task is Cancelled
       let (responseFact, responseUser) = await (try fact, try user)
       state.fact = responseFact
