@@ -7,7 +7,8 @@ import SwiftUI
 
 struct AsyncLetTasksView: View {
 
-  var model = AsyncLetTasksModel()
+  //var model = AsyncLetTasksModel()
+  @Bindable var model = AsyncLetTasksModel()
 
   var body: some View {
     Form {
@@ -53,6 +54,9 @@ struct AsyncLetTasksView: View {
     .onDisappear {
       model.onDisappear()
     }
+    .alert("Error to Fetch Data", isPresented: $model.state.showAlert) {
+      Button("OK") { }
+    }
   }
 }
 
@@ -60,11 +64,13 @@ struct AsyncLetModel {
   var user: User?
   var fact: Fact?
   var isRequesting = false
+  var showAlert = false
 
   mutating func reset() {
     user = nil
     fact = nil
     isRequesting = false
+    showAlert = false
   }
 }
 
@@ -80,9 +86,15 @@ struct AsyncLetModel {
     // 🚨 Creates a Child Task, Immediately, runs the task and continues the flow
     async let fact = getNumberFact(Int.random(in: 1...200))
 
-    let (responseFact, responseUser) = await (fact, user)
-    state.fact = responseFact
-    state.user = responseUser
+    do {
+      // If one Child Task throws an error, The other child Task is Cancelled
+      let (responseFact, responseUser) = await (try fact, try user)
+      state.fact = responseFact
+      state.user = responseUser
+    } catch {
+      print("Error Model: \(error)")
+      state.showAlert = true
+    }
 
     state.isRequesting = false
   }
