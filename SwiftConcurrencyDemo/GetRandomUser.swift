@@ -20,7 +20,7 @@ public func fetchRandomUser() async throws -> User? {
   print("🙅‍♂️ I will Request a random user with ID: \(randomUserId)")
 
   do {
-    try await Task.sleep(for: .seconds(1))
+    try await Task.sleep(for: .seconds(2))
     let url = URL(string: "https://reqres.in/api/users/\(randomUserId)")!
     let (data, _) = try await URLSession.shared.data(from: url)
     let response = try JSONDecoder().decode(RandomUserResponse.self, from: data)
