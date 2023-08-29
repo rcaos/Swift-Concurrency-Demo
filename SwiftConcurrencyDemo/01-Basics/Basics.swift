@@ -7,39 +7,52 @@ import SwiftUI
 
 struct Basics01: View {
 
-  var model = Basics01Model()
+  //var model = Basics01Model()
+  @Bindable var model = Basics01Model() // It's necessary to use the Alert? isPresented: $model.showError
 
   var body: some View {
-    Section {
-      Button("👉 Get Random User", action: {
-        Task {
-          await model.getRandomUser()
+    Form {
+      Section {
+        Button("👉 Get Random User", action: {
+          Task {
+            await model.getRandomUser()
+          }
+        })
+        .padding()
+
+        if model.isRequestingUser {
+          ProgressView()
+            .id(UUID())
         }
-      })
-      .padding()
 
-      if model.isRequestingUser {
-        ProgressView()
+        if let user = model.user {
+          Text("📝 Name: \(user.name)")
+          Text("📩 Email: \(user.email)")
+        }
       }
+      .padding([.top])
 
-      if let user = model.user {
-        Text("📝 Name: \(user.name)")
-        Text("📩 Email: \(user.email)")
-      }
+      Spacer()
     }
-    .padding([.top])
-
-    Spacer()
+    .alert("Error to Fetch User", isPresented: $model.showError) {
+      Button("OK", action: { })
+    }
   }
 }
 
 @Observable class Basics01Model {
   var user: User?
   var isRequestingUser = false
+  var showError = false
 
   func getRandomUser() async {
     isRequestingUser = true
-    user = await fetchRandomUser()
+    do {
+      user = try await fetchRandomUser()
+    } catch {
+      showError = true
+    }
+
     isRequestingUser = false
   }
 
