@@ -4,20 +4,20 @@
 
 import Foundation
 
-func getNumberFact(_ number: Int) async -> Fact {
+func getNumberFact(_ number: Int) async throws -> Fact {
   print("🛜 I will Request a fact for the number: \(number)")
 
   let url = URL(string: "http://numbersapi.com/\(number)/trivia")!
   let factDescription: String
 
   do {
-
     try await Task.sleep(for: .seconds(1))
 
     let (data, _) = try await URLSession.shared.data(from: url)
     factDescription = String(decoding: data, as: UTF8.self)
   } catch {
-    factDescription = "\(number) is a good Number"
+    print("error to getNumberFact: \(error.localizedDescription)")
+    throw error
   }
 
   print("🛜 Returned: \(factDescription) for the number: \(number)")
