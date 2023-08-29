@@ -11,12 +11,18 @@ func getNumberFact(_ number: Int) async throws -> Fact {
   let factDescription: String
 
   do {
-    try await Task.sleep(for: .seconds(1))
+    try await Task.sleep(for: .seconds(2))
 
-    let (data, _) = try await URLSession.shared.data(from: url)
-    factDescription = String(decoding: data, as: UTF8.self)
+    let (data, response) = try await URLSession.shared.data(from: url)
+
+    if (response as? HTTPURLResponse)?.statusCode == 200 {
+      factDescription = String(decoding: data, as: UTF8.self)
+    } else {
+      throw URLError(.badServerResponse)
+    }
+
   } catch {
-    print("error to getNumberFact: \(error.localizedDescription)")
+    print("🛜 error to getNumberFact: \(error.localizedDescription)")
     throw error
   }
 
