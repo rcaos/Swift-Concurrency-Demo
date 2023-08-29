@@ -12,7 +12,7 @@ struct AsyncLetTasksView: View {
   var body: some View {
     Form {
       Section {
-        Button("Run Two Tasks in Parallel! \nGet Random User AND \na Random Factor about a number", action: {
+        Button("Run Two Tasks! \nGet Random User AND \nGet a Random Factor about a number", action: {
           Task {
             await model.run()
           }
@@ -74,10 +74,12 @@ struct AsyncLetModel {
   func run() async {
     state.isRequesting = true
 
+    // 🚨 Creates a Child Task, Immediately, runs the task and continues the flow
     async let user = fetchRandomUser()
+
+    // 🚨 Creates a Child Task, Immediately, runs the task and continues the flow
     async let fact = getNumberFact(Int.random(in: 1...200))
 
-    // 🚨 The two request are running in parallel
     let (responseFact, responseUser) = await (fact, user)
     state.fact = responseFact
     state.user = responseUser
