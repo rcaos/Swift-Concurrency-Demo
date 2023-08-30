@@ -69,8 +69,8 @@ struct AsyncLetTasksCancellationView: View {
     state.isRequesting = true
 
     disposeTask = Task {
-      async let user = fetchRandomUser()
-      async let fact = getNumberFact(Int.random(in: 1...200))
+      async let user = fetchRandomUser(sleep: 2)
+      async let fact = getNumberFact(for: Int.random(in: 1...200), sleep: 2)
 
       do {
         let (responseFact, responseUser) = await (try fact, try user)

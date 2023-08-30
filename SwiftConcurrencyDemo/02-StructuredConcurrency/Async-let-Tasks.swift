@@ -84,7 +84,7 @@ struct AsyncLetModel {
     async let user = fetchRandomUser()
 
     // 🚨 Creates a Child Task, Immediately, runs the task and continues the flow
-    async let fact = getNumberFact(Int.random(in: 1...200))
+    async let fact = getNumberFact(for: Int.random(in: 1...200))
 
     do {
       // A task parent-child link enforces a rule that says a parent task can only finish its work if all of its child tasks have finished
