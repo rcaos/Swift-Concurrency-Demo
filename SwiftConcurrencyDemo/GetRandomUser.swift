@@ -15,14 +15,20 @@ func foo() async {
   }
 }
 
-public func fetchRandomUser() async throws -> User? {
+public func fetchRandomUser(
+  sleep: Int? = nil
+) async throws -> User? {
   let randomUserId = Int.random(in: 1...12)
   print("🙅‍♂️ I will Request a random user with ID: \(randomUserId)")
-
+  
   do {
-    try await Task.sleep(for: .seconds(2))
     let url = URL(string: "https://reqres.in/api/users/\(randomUserId)")!
+    
+    if let sleep {
+      try await Task.sleep(for: .seconds(sleep))
+    }
     let (data, _) = try await URLSession.shared.data(from: url)
+    
     let response = try JSONDecoder().decode(RandomUserResponse.self, from: data)
     print("🙅‍♂️ Random user: \(response)")
     return response.toDomain()
