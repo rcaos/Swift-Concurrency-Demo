@@ -5,9 +5,10 @@
 import XCTest
 import SwiftConcurrencyDemo
 
-final class ActorDemoTests: XCTestCase {
+#warning("All these tests will always fail")
+final class MutableClassTests: XCTestCase {
 
-  func testCounter() throws {
+  func testBreakCounter() throws {
     let sut = MutableClass()
 
     DispatchQueue.concurrentPerform(iterations: 1000) { index in
@@ -17,7 +18,7 @@ final class ActorDemoTests: XCTestCase {
     XCTAssertEqual(sut.counter, 1000)
   }
 
-  func testCounter2() throws {
+  func testBreakCounter2() throws {
     let group = DispatchGroup()
     let sut = MutableClass()
 
@@ -36,7 +37,7 @@ final class ActorDemoTests: XCTestCase {
     XCTAssertEqual(sut.counter, 1000)
   }
 
-  func testCounter3() async throws {
+  func testBreakCounter3() async throws {
     let sut = MutableClass()
 
     let expectedValue = 1000
@@ -56,7 +57,7 @@ final class ActorDemoTests: XCTestCase {
     XCTAssertEqual(value, expectedValue)
   }
 
-  func testCounter4() async throws {
+  func testBreakCounter4() async throws {
     let expectedValue = 1000
 
     let sut = MutableClass()

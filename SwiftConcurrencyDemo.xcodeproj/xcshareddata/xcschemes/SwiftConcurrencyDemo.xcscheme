@@ -43,7 +43,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:ActorDemoTests/ActorDemo.xctestplan"
+            reference = "container:SwiftConcurrencyDemoTests/ActorDemo.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

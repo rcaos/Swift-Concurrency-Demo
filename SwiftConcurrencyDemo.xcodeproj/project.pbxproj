@@ -61,7 +61,6 @@
 		7778E44B2A9CEC2300B056DF /* AsyncStream-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncStream-Delegate.swift"; sourceTree = "<group>"; };
 		7778E44E2A9D167700B056DF /* Async-let-Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async-let-Tasks.swift"; sourceTree = "<group>"; };
 		7778E4502A9D16F300B056DF /* GetFactNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFactNumber.swift; sourceTree = "<group>"; };
-		7778E4522A9D19F200B056DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7778E4532A9D1A8B00B056DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		777B79042A9A629300995864 /* AsyncStreamURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamURL.swift; sourceTree = "<group>"; };
 		77CF3D072A995B3D001E05AE /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
@@ -197,7 +196,6 @@
 		77F57B8C2A94144500852C88 /* SwiftConcurrencyDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				7778E4522A9D19F200B056DF /* Info.plist */,
 				77F57BAA2A941ACD00852C88 /* ActorDemo.xctestplan */,
 				77F57B8D2A94144500852C88 /* MutableClassTests.swift */,
 				771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */,

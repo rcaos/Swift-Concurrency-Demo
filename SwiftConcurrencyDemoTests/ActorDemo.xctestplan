@@ -4,7 +4,7 @@
       "id" : "2654DA32-CCBE-48D0-89CA-A7EBF32D2F8B",
       "name" : "Test Scheme Action",
       "options" : {
-        "maximumTestRepetitions" : 1000,
+        "maximumTestRepetitions" : 100,
         "testRepetitionMode" : "fixedIterations"
       }
     }
@@ -18,11 +18,13 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
+      "skippedTests" : [
+        "MutableDictionaryTests"
+      ],
       "target" : {
-        "containerPath" : "container:ActorDemo.xcodeproj",
+        "containerPath" : "container:SwiftConcurrencyDemo.xcodeproj",
         "identifier" : "77F57B882A94144500852C88",
-        "name" : "ActorDemoTests"
+        "name" : "SwiftConcurrencyDemoTests"
       }
     }
   ],
