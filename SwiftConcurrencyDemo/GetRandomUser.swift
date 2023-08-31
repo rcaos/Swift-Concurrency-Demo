@@ -7,7 +7,8 @@ import Foundation
 /// Only supports from 1 to 12
 public func fetchRandomUser(
   userId: Int? = nil,
-  sleep: Int? = nil
+  sleep: Int? = nil,
+  forceError: Bool = false
 ) async throws -> User {
 
   let randomUserId: Int
@@ -17,13 +18,12 @@ public func fetchRandomUser(
     randomUserId = Int.random(in: 1...12)
   }
 
-  //let randomUserId = Int.random(in: 1...12)
-
-
   print("🙅‍♂️ I will Request a random user with ID: \(randomUserId)")
 
   do {
-    let url = URL(string: "https://reqres.in/api/users/\(randomUserId)")!
+    let url = forceError ?
+    URL(string: "https://XXX_reqres.in/api/users/\(randomUserId)")! :
+    URL(string: "https://reqres.in/api/users/\(randomUserId)")!
 
     if let sleep {
       try await Task.sleep(for: .seconds(sleep))
