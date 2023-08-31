@@ -27,6 +27,9 @@ struct RootView: View {
           NavigationLink("Async-let Tasks - Cancellation", destination: {
             AsyncLetTasksCancellationView()
           })
+          NavigationLink("Async-let Task Tree", destination: {
+            AsyncLetTaskTreeView()
+          })
         }, header: {
           Text("Structured Concurrency")
         })
