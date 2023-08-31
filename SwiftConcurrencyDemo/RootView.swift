@@ -30,6 +30,9 @@ struct RootView: View {
           NavigationLink("Async-let Task Tree", destination: {
             AsyncLetTaskTreeView()
           })
+          NavigationLink("Group Tasks - Run in Parallel", destination: {
+            GroupTaskView()
+          })
         }, header: {
           Text("Structured Concurrency")
         })
