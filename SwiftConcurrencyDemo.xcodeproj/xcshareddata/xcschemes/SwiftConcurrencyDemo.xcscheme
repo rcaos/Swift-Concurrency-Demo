@@ -22,7 +22,7 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
@@ -56,17 +56,6 @@
                BlueprintIdentifier = "77F57B882A94144500852C88"
                BuildableName = "SwiftConcurrencyDemoTests.xctest"
                BlueprintName = "SwiftConcurrencyDemoTests"
-               ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77F57B922A94144500852C88"
-               BuildableName = "ActorDemoUITests.xctest"
-               BlueprintName = "ActorDemoUITests"
                ReferencedContainer = "container:SwiftConcurrencyDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>

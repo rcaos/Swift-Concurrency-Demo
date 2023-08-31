@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77008E912AA1077600EF0C34 /* GroupTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77008E902AA1077600EF0C34 /* GroupTasks.swift */; };
+		77053C572A9ACF6F004045E8 /* BasicsClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77053C562A9ACF6F004045E8 /* BasicsClosure.swift */; };
 		771D93592A951E56004C4DA3 /* MutableCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D93582A951E56004C4DA3 /* MutableCollections.swift */; };
 		771D935B2A951E78004C4DA3 /* MutableCollectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */; };
 		771D935D2A9521DD004C4DA3 /* MutableCollectionActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */; };
 		771D935F2A952208004C4DA3 /* ActorCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */; };
+		7726CB3E2A9FD6FE00D28087 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726CB3D2A9FD6FE00D28087 /* GetImage.swift */; };
+		7726CB402A9FDBF600D28087 /* Async-let-Task-Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726CB3F2A9FDBF600D28087 /* Async-let-Task-Tree.swift */; };
 		77476B7C2A95131B00BA0EF1 /* ActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77476B7B2A95131B00BA0EF1 /* ActorTests.swift */; };
+		775C6B1A2A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C6B192A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift */; };
 		77753DB02A9508F500C30F16 /* TaskPriority+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */; };
 		77753DB22A95091200C30F16 /* MutableActorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77753DB12A95091200C30F16 /* MutableActorClass.swift */; };
-		77F57B7C2A94144300852C88 /* ActorDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F57B7B2A94144300852C88 /* ActorDemoApp.swift */; };
-		77F57B7E2A94144300852C88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F57B7D2A94144300852C88 /* ContentView.swift */; };
+		7778E44C2A9CEC2300B056DF /* AsyncStream-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778E44B2A9CEC2300B056DF /* AsyncStream-Delegate.swift */; };
+		7778E44F2A9D167700B056DF /* Async-let-Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778E44E2A9D167700B056DF /* Async-let-Tasks.swift */; };
+		7778E4512A9D16F300B056DF /* GetFactNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778E4502A9D16F300B056DF /* GetFactNumber.swift */; };
+		777B79052A9A629300995864 /* AsyncStreamURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777B79042A9A629300995864 /* AsyncStreamURL.swift */; };
+		77CF3D082A995B3D001E05AE /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF3D072A995B3D001E05AE /* Basics.swift */; };
+		77CF3D0A2A995CC8001E05AE /* GetRandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF3D092A995CC8001E05AE /* GetRandomUser.swift */; };
+		77CF3D0C2A996A6E001E05AE /* AsyncStream-Unfolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF3D0B2A996A6E001E05AE /* AsyncStream-Unfolding.swift */; };
+		77F57B7C2A94144300852C88 /* SwiftConcurrencyDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F57B7B2A94144300852C88 /* SwiftConcurrencyDemoApp.swift */; };
+		77F57B7E2A94144300852C88 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F57B7D2A94144300852C88 /* RootView.swift */; };
 		77F57B802A94144500852C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F57B7F2A94144500852C88 /* Assets.xcassets */; };
 		77F57B842A94144500852C88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F57B832A94144500852C88 /* Preview Assets.xcassets */; };
 		77F57B8E2A94144500852C88 /* MutableClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F57B8D2A94144500852C88 /* MutableClassTests.swift */; };
@@ -34,16 +46,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77008E902AA1077600EF0C34 /* GroupTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTasks.swift; sourceTree = "<group>"; };
+		77053C562A9ACF6F004045E8 /* BasicsClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsClosure.swift; sourceTree = "<group>"; };
 		771D93582A951E56004C4DA3 /* MutableCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollections.swift; sourceTree = "<group>"; };
 		771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionsTests.swift; sourceTree = "<group>"; };
 		771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionActor.swift; sourceTree = "<group>"; };
 		771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCollectionTests.swift; sourceTree = "<group>"; };
+		7726CB3D2A9FD6FE00D28087 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
+		7726CB3F2A9FDBF600D28087 /* Async-let-Task-Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async-let-Task-Tree.swift"; sourceTree = "<group>"; };
 		77476B7B2A95131B00BA0EF1 /* ActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTests.swift; sourceTree = "<group>"; };
+		775C6B192A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async-let-Tasks-Cancellation.swift"; sourceTree = "<group>"; };
 		77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskPriority+Random.swift"; sourceTree = "<group>"; };
 		77753DB12A95091200C30F16 /* MutableActorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableActorClass.swift; sourceTree = "<group>"; };
+		7778E44B2A9CEC2300B056DF /* AsyncStream-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncStream-Delegate.swift"; sourceTree = "<group>"; };
+		7778E44E2A9D167700B056DF /* Async-let-Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async-let-Tasks.swift"; sourceTree = "<group>"; };
+		7778E4502A9D16F300B056DF /* GetFactNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFactNumber.swift; sourceTree = "<group>"; };
+		7778E4522A9D19F200B056DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7778E4532A9D1A8B00B056DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		777B79042A9A629300995864 /* AsyncStreamURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamURL.swift; sourceTree = "<group>"; };
+		77CF3D072A995B3D001E05AE /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
+		77CF3D092A995CC8001E05AE /* GetRandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomUser.swift; sourceTree = "<group>"; };
+		77CF3D0B2A996A6E001E05AE /* AsyncStream-Unfolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncStream-Unfolding.swift"; sourceTree = "<group>"; };
 		77F57B782A94144300852C88 /* SwiftConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		77F57B7B2A94144300852C88 /* ActorDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDemoApp.swift; sourceTree = "<group>"; };
-		77F57B7D2A94144300852C88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77F57B7B2A94144300852C88 /* SwiftConcurrencyDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyDemoApp.swift; sourceTree = "<group>"; };
+		77F57B7D2A94144300852C88 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		77F57B7F2A94144500852C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77F57B812A94144500852C88 /* ActorDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActorDemo.entitlements; sourceTree = "<group>"; };
 		77F57B832A94144500852C88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,6 +98,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77008E922AA13FB600EF0C34 /* FetchApiExamples */ = {
+			isa = PBXGroup;
+			children = (
+				7778E4502A9D16F300B056DF /* GetFactNumber.swift */,
+				77CF3D092A995CC8001E05AE /* GetRandomUser.swift */,
+				7726CB3D2A9FD6FE00D28087 /* GetImage.swift */,
+			);
+			path = FetchApiExamples;
+			sourceTree = "<group>";
+		};
+		7778E44D2A9D163000B056DF /* 02-StructuredConcurrency */ = {
+			isa = PBXGroup;
+			children = (
+				7778E44E2A9D167700B056DF /* Async-let-Tasks.swift */,
+				775C6B192A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift */,
+				7726CB3F2A9FDBF600D28087 /* Async-let-Task-Tree.swift */,
+				77008E902AA1077600EF0C34 /* GroupTasks.swift */,
+			);
+			path = "02-StructuredConcurrency";
+			sourceTree = "<group>";
+		};
+		7778E4542A9D1FE900B056DF /* 03-AsyncStream */ = {
+			isa = PBXGroup;
+			children = (
+				77CF3D0B2A996A6E001E05AE /* AsyncStream-Unfolding.swift */,
+				777B79042A9A629300995864 /* AsyncStreamURL.swift */,
+				7778E44B2A9CEC2300B056DF /* AsyncStream-Delegate.swift */,
+			);
+			path = "03-AsyncStream";
+			sourceTree = "<group>";
+		};
 		77CF3D052A994ADB001E05AE /* Actor */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +138,15 @@
 				771D935C2A9521DD004C4DA3 /* MutableCollectionActor.swift */,
 			);
 			path = Actor;
+			sourceTree = "<group>";
+		};
+		77CF3D062A995B2B001E05AE /* 01-Basics */ = {
+			isa = PBXGroup;
+			children = (
+				77CF3D072A995B3D001E05AE /* Basics.swift */,
+				77053C562A9ACF6F004045E8 /* BasicsClosure.swift */,
+			);
+			path = "01-Basics";
 			sourceTree = "<group>";
 		};
 		77F57B6F2A94144300852C88 = {
@@ -104,9 +170,14 @@
 		77F57B7A2A94144300852C88 /* SwiftConcurrencyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7778E4532A9D1A8B00B056DF /* Info.plist */,
+				77CF3D062A995B2B001E05AE /* 01-Basics */,
+				7778E44D2A9D163000B056DF /* 02-StructuredConcurrency */,
+				7778E4542A9D1FE900B056DF /* 03-AsyncStream */,
 				77CF3D052A994ADB001E05AE /* Actor */,
-				77F57B7B2A94144300852C88 /* ActorDemoApp.swift */,
-				77F57B7D2A94144300852C88 /* ContentView.swift */,
+				77008E922AA13FB600EF0C34 /* FetchApiExamples */,
+				77F57B7B2A94144300852C88 /* SwiftConcurrencyDemoApp.swift */,
+				77F57B7D2A94144300852C88 /* RootView.swift */,
 				77F57BA82A94191E00852C88 /* IsTesting.swift */,
 				77F57B7F2A94144500852C88 /* Assets.xcassets */,
 				77F57B812A94144500852C88 /* ActorDemo.entitlements */,
@@ -126,6 +197,7 @@
 		77F57B8C2A94144500852C88 /* SwiftConcurrencyDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				7778E4522A9D19F200B056DF /* Info.plist */,
 				77F57BAA2A941ACD00852C88 /* ActorDemo.xctestplan */,
 				77F57B8D2A94144500852C88 /* MutableClassTests.swift */,
 				771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */,
@@ -236,13 +308,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7778E44C2A9CEC2300B056DF /* AsyncStream-Delegate.swift in Sources */,
+				77008E912AA1077600EF0C34 /* GroupTasks.swift in Sources */,
+				7778E44F2A9D167700B056DF /* Async-let-Tasks.swift in Sources */,
+				775C6B1A2A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift in Sources */,
+				77CF3D0A2A995CC8001E05AE /* GetRandomUser.swift in Sources */,
 				771D93592A951E56004C4DA3 /* MutableCollections.swift in Sources */,
+				777B79052A9A629300995864 /* AsyncStreamURL.swift in Sources */,
+				7778E4512A9D16F300B056DF /* GetFactNumber.swift in Sources */,
 				771D935D2A9521DD004C4DA3 /* MutableCollectionActor.swift in Sources */,
 				77F57BA92A94191E00852C88 /* IsTesting.swift in Sources */,
+				7726CB3E2A9FD6FE00D28087 /* GetImage.swift in Sources */,
+				77053C572A9ACF6F004045E8 /* BasicsClosure.swift in Sources */,
+				77CF3D0C2A996A6E001E05AE /* AsyncStream-Unfolding.swift in Sources */,
 				77753DB22A95091200C30F16 /* MutableActorClass.swift in Sources */,
+				7726CB402A9FDBF600D28087 /* Async-let-Task-Tree.swift in Sources */,
+				77CF3D082A995B3D001E05AE /* Basics.swift in Sources */,
 				77F57BA72A9415A400852C88 /* MutableClass.swift in Sources */,
-				77F57B7E2A94144300852C88 /* ContentView.swift in Sources */,
-				77F57B7C2A94144300852C88 /* ActorDemoApp.swift in Sources */,
+				77F57B7E2A94144300852C88 /* RootView.swift in Sources */,
+				77F57B7C2A94144300852C88 /* SwiftConcurrencyDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +480,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftConcurrencyDemo/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -434,6 +519,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftConcurrencyDemo/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -468,6 +554,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J5F9YP48;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftConcurrencyDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
@@ -491,6 +578,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J5F9YP48;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftConcurrencyDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
