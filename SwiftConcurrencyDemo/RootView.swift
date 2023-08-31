@@ -13,7 +13,7 @@ struct RootView: View {
           NavigationLink("Basic", destination: {
             Basics01()
           })
-          NavigationLink("Basic 02", destination: {
+          NavigationLink("Closures to Async", destination: {
             Basic02View()
           })
         }, header: {
@@ -30,7 +30,7 @@ struct RootView: View {
           NavigationLink("Async-let Task Tree", destination: {
             AsyncLetTaskTreeView()
           })
-          NavigationLink("Group Tasks - Run in Parallel", destination: {
+          NavigationLink("Group Tasks", destination: {
             GroupTaskView()
           })
         }, header: {
