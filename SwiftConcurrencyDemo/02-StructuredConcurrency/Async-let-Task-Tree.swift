@@ -11,7 +11,7 @@ struct AsyncLetTaskTreeView: View {
   var body: some View {
     Form {
       Section {
-        Button("Run Heavy Async Task. Go Back quickly to cancell them", action: {
+        Button("Iterate and Run multiple Tasks. Go Back quickly to cancell them", action: {
           model.run()
         })
         .padding()
