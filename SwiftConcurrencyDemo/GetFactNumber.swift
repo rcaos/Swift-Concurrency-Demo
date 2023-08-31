@@ -6,11 +6,12 @@ import Foundation
 
 func getNumberFact(
   for number: Int,
-  sleep: Int? = nil
+  sleep: Int? = nil,
+  forceError: Bool = false
 ) async throws -> Fact {
   print("🛜 I will Request a fact for the number: \(number)")
 
-  let url = URL(string: "http://numbersapi.com/\(number)/trivia")!
+  let url = forceError ? URL(string: "http://XXX_numbersapi.com/\(number)/trivia")! : URL(string: "http://numbersapi.com/\(number)/trivia")!
   let factDescription: String
 
   do {
