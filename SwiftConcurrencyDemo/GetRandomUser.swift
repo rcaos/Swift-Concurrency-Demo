@@ -4,10 +4,22 @@
 
 import Foundation
 
+/// Only supports from 1 to 12
 public func fetchRandomUser(
+  userId: Int? = nil,
   sleep: Int? = nil
 ) async throws -> User {
-  let randomUserId = Int.random(in: 1...12)
+
+  let randomUserId: Int
+  if let userId {
+    randomUserId = min(userId, 12)
+  } else {
+    randomUserId = Int.random(in: 1...12)
+  }
+
+  //let randomUserId = Int.random(in: 1...12)
+
+
   print("🙅‍♂️ I will Request a random user with ID: \(randomUserId)")
 
   do {
