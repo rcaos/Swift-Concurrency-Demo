@@ -4,6 +4,8 @@
 
 import Foundation
 
+// from: https://github.com/pointfreeco/xctest-dynamic-overlay/blob/main/Sources/XCTestDynamicOverlay/XCTIsTesting.swift
+
 public let _XCTIsTesting: Bool = {
   ProcessInfo.processInfo.environment.keys.contains("XCTestBundlePath")
   || ProcessInfo.processInfo.environment.keys.contains("XCTestConfigurationFilePath")
