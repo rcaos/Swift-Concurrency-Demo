@@ -6,8 +6,7 @@ import SwiftUI
 
 struct AsyncLetTaskTreeView: View {
 
-  //var model = AsyncLetTaskTreeModel()
-  @Bindable var model = AsyncLetTaskTreeModel()
+  var model = AsyncLetTaskTreeModel()
 
   var body: some View {
     Form {
@@ -33,9 +32,6 @@ struct AsyncLetTaskTreeView: View {
     .onDisappear {
       model.onDisappear()
     }
-    .alert("Error to Fetch Data", isPresented: $model.showAlert) {
-      Button("OK") { }
-    }
   }
 }
 
@@ -43,7 +39,6 @@ struct AsyncLetTaskTreeView: View {
 
 @Observable class AsyncLetTaskTreeModel {
   var isRequesting = false
-  var showAlert = false
 
   var disposeTask: Task<Void, Never>?
 
@@ -63,7 +58,10 @@ struct AsyncLetTaskTreeView: View {
     disposeTask = Task {
       do {
         for (index, image) in images.enumerated() {
+
           try Task.checkCancellation() // Avoid keep iterating if the Task was cancelled, comment and see whats happens
+          //if Task.isCancelled { break }
+
           let model = await getUser_Fact_and_Image(index, image)
           print("🔴 returned: \(String(describing: model))\n")
         }
@@ -79,7 +77,6 @@ struct AsyncLetTaskTreeView: View {
     disposeTask = nil
 
     isRequesting = false
-    showAlert = false
   }
 
   deinit {
