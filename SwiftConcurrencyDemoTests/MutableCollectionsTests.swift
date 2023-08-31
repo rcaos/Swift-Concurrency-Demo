@@ -7,6 +7,7 @@ import Foundation
 import XCTest
 import SwiftConcurrencyDemo
 
+#warning("Running this these to see data races in action")
 final class MutableDictionaryTests: XCTestCase {
 
   func test_Break_Dictionary() throws {
