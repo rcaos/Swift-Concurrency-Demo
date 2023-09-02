@@ -50,6 +50,14 @@ struct RootView: View {
         } , header: {
           Text("Async Stream")
         })
+
+        Section(content: {
+          NavigationLink("Basic Test", destination: {
+            TestingDemoView()
+          })
+        } , header: {
+          Text("Testing")
+        })
       }
       .navigationTitle("Swift Concurrency")
     }
