@@ -71,3 +71,22 @@ private struct RandomUserResponse: Decodable {
     )
   }
 }
+
+// MARK: - Use Case - Convenience
+struct RequestFetchUser {
+  let userId: Int?
+  let sleep: Int?
+  let forceError: Bool
+
+  init(userId: Int? = nil, sleep: Int? = nil, forceError: Bool = false) {
+    self.userId = userId
+    self.sleep = sleep
+    self.forceError = forceError
+  }
+}
+
+struct FetchRandomUser {
+  func execute(request: RequestFetchUser) async throws -> User {
+    try await fetchRandomUser(userId: request.userId, sleep: request.sleep, forceError: request.forceError)
+  }
+}
