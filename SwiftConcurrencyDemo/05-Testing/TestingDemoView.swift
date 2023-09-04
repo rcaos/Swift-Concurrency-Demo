@@ -7,7 +7,7 @@ import SwiftUI
 
 struct TestingDemoView: View {
 
-  @Bindable var model = TestingDemoModel(fetchRandomUser: .init())
+  @Bindable var model = TestingDemoModel(fetchRandomUser: { .live })
 
   var body: some View {
     Form {
@@ -39,6 +39,9 @@ struct TestingDemoView: View {
 
       Spacer()
     }
+    .onDisappear {
+      model.cancel()
+    }
     .alert("Error to Fetch User", isPresented: $model.showError) {
       Button("OK", action: { })
     }
@@ -49,11 +52,11 @@ struct TestingDemoView: View {
   var user: User?
   var isRequestingUser = false
   var showError = false
-  private var userTask: Task<Void, Never>?
+  private (set) var userTask: Task<Void, Never>?
 
-  private let fetchRandomUser: FetchRandomUser
+  private let fetchRandomUser: () -> FetchRandomUser
 
-  init(fetchRandomUser: FetchRandomUser) {
+  init(fetchRandomUser: @escaping () -> FetchRandomUser) {
     self.fetchRandomUser = fetchRandomUser
   }
 
@@ -63,7 +66,7 @@ struct TestingDemoView: View {
 
     userTask = Task {
       do {
-        user = try await fetchRandomUser.execute(request: .init(sleep: 1))
+        user = try await fetchRandomUser().execute(.init(sleep: 1))
       } catch {
         if !Task.isCancelled {
           showError = true
