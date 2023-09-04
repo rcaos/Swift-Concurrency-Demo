@@ -15,6 +15,8 @@
 		771D935F2A952208004C4DA3 /* ActorCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */; };
 		7726CB3E2A9FD6FE00D28087 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726CB3D2A9FD6FE00D28087 /* GetImage.swift */; };
 		7726CB402A9FDBF600D28087 /* Async-let-Task-Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726CB3F2A9FDBF600D28087 /* Async-let-Task-Tree.swift */; };
+		773D0C722AA63299002D9693 /* TestingAsyncStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D0C712AA63299002D9693 /* TestingAsyncStreamView.swift */; };
+		773D0C742AA63725002D9693 /* TestingAsyncStreamViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D0C732AA63725002D9693 /* TestingAsyncStreamViewTest.swift */; };
 		77476B7C2A95131B00BA0EF1 /* ActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77476B7B2A95131B00BA0EF1 /* ActorTests.swift */; };
 		775C6B1A2A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C6B192A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift */; };
 		77753DB02A9508F500C30F16 /* TaskPriority+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */; };
@@ -57,6 +59,8 @@
 		771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCollectionTests.swift; sourceTree = "<group>"; };
 		7726CB3D2A9FD6FE00D28087 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
 		7726CB3F2A9FDBF600D28087 /* Async-let-Task-Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async-let-Task-Tree.swift"; sourceTree = "<group>"; };
+		773D0C712AA63299002D9693 /* TestingAsyncStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAsyncStreamView.swift; sourceTree = "<group>"; };
+		773D0C732AA63725002D9693 /* TestingAsyncStreamViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAsyncStreamViewTest.swift; sourceTree = "<group>"; };
 		77476B7B2A95131B00BA0EF1 /* ActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTests.swift; sourceTree = "<group>"; };
 		775C6B192A9E622900E6E644 /* Async-let-Tasks-Cancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async-let-Tasks-Cancellation.swift"; sourceTree = "<group>"; };
 		77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskPriority+Random.swift"; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				778696252AA2B4D8009B72EC /* TestingDemoViewTest.swift */,
+				773D0C732AA63725002D9693 /* TestingAsyncStreamViewTest.swift */,
 			);
 			path = BasicTests;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				778696222AA2B3B1009B72EC /* TestingDemoView.swift */,
+				773D0C712AA63299002D9693 /* TestingAsyncStreamView.swift */,
 			);
 			path = "05-Testing";
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				7778E4512A9D16F300B056DF /* GetFactNumber.swift in Sources */,
 				771D935D2A9521DD004C4DA3 /* MutableCollectionActor.swift in Sources */,
 				77F57BA92A94191E00852C88 /* IsTesting.swift in Sources */,
+				773D0C722AA63299002D9693 /* TestingAsyncStreamView.swift in Sources */,
 				7726CB3E2A9FD6FE00D28087 /* GetImage.swift in Sources */,
 				77053C572A9ACF6F004045E8 /* BasicsClosure.swift in Sources */,
 				77CF3D0C2A996A6E001E05AE /* AsyncStream-Unfolding.swift in Sources */,
@@ -374,6 +381,7 @@
 				778696262AA2B4D8009B72EC /* TestingDemoViewTest.swift in Sources */,
 				77476B7C2A95131B00BA0EF1 /* ActorTests.swift in Sources */,
 				77F57B8E2A94144500852C88 /* MutableClassTests.swift in Sources */,
+				773D0C742AA63725002D9693 /* TestingAsyncStreamViewTest.swift in Sources */,
 				771D935F2A952208004C4DA3 /* ActorCollectionTests.swift in Sources */,
 				771D935B2A951E78004C4DA3 /* MutableCollectionsTests.swift in Sources */,
 				77753DB02A9508F500C30F16 /* TaskPriority+Random.swift in Sources */,
