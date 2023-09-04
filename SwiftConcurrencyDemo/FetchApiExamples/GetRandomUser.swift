@@ -86,7 +86,7 @@ struct RequestFetchUser {
 }
 
 struct FetchRandomUser {
-  public let execute: (_ request: RequestFetchUser) async throws -> User?
+  public let execute: @Sendable (_ request: RequestFetchUser) async throws -> User?
 }
 
 extension FetchRandomUser {

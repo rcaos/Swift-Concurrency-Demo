@@ -21,7 +21,7 @@ final class TestingDemoViewTest: XCTestCase {
     let mock = FetchRandomUser(execute: { request in
       // 0. It's necessary this yield?
       //await Task.yield()
-      await userStream.stream.first(where: { _ in true })!
+      return await userStream.stream.first(where: { _ in true })!
     })
 
     let sut = TestingDemoModel(fetchRandomUser: { mock })
