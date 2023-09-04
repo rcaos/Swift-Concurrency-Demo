@@ -16,7 +16,8 @@ final class TestingDemoViewTest: XCTestCase {
 
   func testExample() async {
     let mock = FetchRandomUser(execute: { request in
-      //await Task.yield() /// It's mandatory?
+      // 0. It's necessary this yield?
+      //await Task.yield()
       return .init(id: 1, name: "name", email: "aa@mail")
     })
 
