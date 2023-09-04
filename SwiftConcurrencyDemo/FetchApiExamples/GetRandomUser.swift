@@ -39,7 +39,7 @@ public func fetchRandomUser(
   }
 }
 
-public struct User {
+public struct User: Equatable {
   public let id: Int
   public let name: String
   public let email: String
@@ -86,7 +86,13 @@ struct RequestFetchUser {
 }
 
 struct FetchRandomUser {
-  func execute(request: RequestFetchUser) async throws -> User {
-    try await fetchRandomUser(userId: request.userId, sleep: request.sleep, forceError: request.forceError)
+  public let execute: (_ request: RequestFetchUser) async throws -> User?
+}
+
+extension FetchRandomUser {
+  static var live: FetchRandomUser {
+    return FetchRandomUser(execute: { request in
+      return try await fetchRandomUser(userId: request.userId, sleep: request.sleep, forceError: request.forceError)
+    })
   }
 }
