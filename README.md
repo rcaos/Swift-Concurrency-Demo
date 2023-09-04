@@ -12,6 +12,7 @@ The repository contains a variety of examples, each focusing on different aspect
 - Structured concurrency (Group of tasks)
 - Unstructured Tasks
 - AsyncStream
+- Actors
 - Task cancellation
 - Reliably Testing
 
