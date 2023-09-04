@@ -15,10 +15,13 @@ final class TestingDemoViewTest: XCTestCase {
   }
 
   func test_When_Waiting_For_Task_should_Be_Loading() async {
+
+    let userStream = AsyncStream.makeStream(of: User.self)
+
     let mock = FetchRandomUser(execute: { request in
       // 0. It's necessary this yield?
       //await Task.yield()
-      return .init(id: 1, name: "name", email: "aa@mail")
+      await userStream.stream.first(where: { _ in true })!
     })
 
     let sut = TestingDemoModel(fetchRandomUser: { mock })
@@ -34,13 +37,16 @@ final class TestingDemoViewTest: XCTestCase {
     // 3. Check condition Before run Task
     XCTAssertTrue(sut.isRequestingUser)
 
-    // 4. Optional, in this case because I'm handling cancellation
+    // 4. Send a Value
+    userStream.continuation.yield(.init(id: 1, name: "name", email: "aa@mail"))
+
+    // 5. Optional, in this case because I'm handling cancellation
     await sut.userTask?.value
 
-    // 5. Wait for task result
+    // 6. Wait for task result
     await task.value
 
-    // 6. Assert for expected results
+    // 7. Assert for expected results
     XCTAssertEqual(sut.user, .init(id: 1, name: "name", email: "aa@mail"))
     XCTAssertFalse(sut.isRequestingUser)
   }
