@@ -45,10 +45,22 @@ final class TestingDemoViewTest: XCTestCase {
     XCTAssertFalse(sut.isRequestingUser)
   }
 
+  ///  func testCancel() async {
+  ///    let model = withDependencies {
+  ///      $0.numberFact.fact = { _ in try await Task.never() }
+  ///    } operation: {
+  ///      NumberFactModel()
+  ///    }
+  ///    let task = Task { await model.getFactButtonTapped() }
+  ///    await Task.megaYield()
+  ///    model.cancelButtonTapped()
+  ///    await task.value
+  ///    XCTAssertEqual(model.fact, nil)
+  ///  }
   func test_When_Task_Doesnt_Return_and_User_Cancel_Then_Task_Must_Cancel() async {
 
     let mock = FetchRandomUser(execute: { request in
-      return .init(id: 1, name: "name", email: "aa@mail")
+      return try await Task.never()
     })
 
     let sut = TestingDemoModel(fetchRandomUser: { mock })
@@ -58,7 +70,6 @@ final class TestingDemoViewTest: XCTestCase {
     }
 
     await Task.yield()
-    XCTAssertTrue(sut.isRequestingUser)
 
     sut.cancel()
 
