@@ -113,6 +113,26 @@
 			path = FetchApiExamples;
 			sourceTree = "<group>";
 		};
+		773D0C6F2AA631CA002D9693 /* ActorTests */ = {
+			isa = PBXGroup;
+			children = (
+				77F57B8D2A94144500852C88 /* MutableClassTests.swift */,
+				771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */,
+				77476B7B2A95131B00BA0EF1 /* ActorTests.swift */,
+				771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */,
+				77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */,
+			);
+			path = ActorTests;
+			sourceTree = "<group>";
+		};
+		773D0C702AA631D1002D9693 /* BasicTests */ = {
+			isa = PBXGroup;
+			children = (
+				778696252AA2B4D8009B72EC /* TestingDemoViewTest.swift */,
+			);
+			path = BasicTests;
+			sourceTree = "<group>";
+		};
 		7778E44D2A9D163000B056DF /* 02-StructuredConcurrency */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,12 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				77F57BAA2A941ACD00852C88 /* ActorDemo.xctestplan */,
-				77F57B8D2A94144500852C88 /* MutableClassTests.swift */,
-				771D935A2A951E78004C4DA3 /* MutableCollectionsTests.swift */,
-				77476B7B2A95131B00BA0EF1 /* ActorTests.swift */,
-				771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */,
-				77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */,
-				778696252AA2B4D8009B72EC /* TestingDemoViewTest.swift */,
+				773D0C6F2AA631CA002D9693 /* ActorTests */,
+				773D0C702AA631D1002D9693 /* BasicTests */,
 			);
 			path = SwiftConcurrencyDemoTests;
 			sourceTree = "<group>";
