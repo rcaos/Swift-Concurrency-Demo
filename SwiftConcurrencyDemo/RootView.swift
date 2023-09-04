@@ -52,8 +52,11 @@ struct RootView: View {
         })
 
         Section(content: {
-          NavigationLink("Basic Test", destination: {
+          NavigationLink("Test Loading and Cancellation", destination: {
             TestingDemoView()
+          })
+          NavigationLink("Test Async Stream", destination: {
+            TestingAsyncStreamView()
           })
         } , header: {
           Text("Testing")
