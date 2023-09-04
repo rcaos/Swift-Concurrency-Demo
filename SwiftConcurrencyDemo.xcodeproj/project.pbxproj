@@ -23,6 +23,9 @@
 		7778E44F2A9D167700B056DF /* Async-let-Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778E44E2A9D167700B056DF /* Async-let-Tasks.swift */; };
 		7778E4512A9D16F300B056DF /* GetFactNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778E4502A9D16F300B056DF /* GetFactNumber.swift */; };
 		777B79052A9A629300995864 /* AsyncStreamURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777B79042A9A629300995864 /* AsyncStreamURL.swift */; };
+		778696232AA2B3B1009B72EC /* TestingDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778696222AA2B3B1009B72EC /* TestingDemoView.swift */; };
+		778696262AA2B4D8009B72EC /* TestingDemoViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778696252AA2B4D8009B72EC /* TestingDemoViewTest.swift */; };
+		778696292AA2C1B2009B72EC /* ConcurrencyExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 778696282AA2C1B2009B72EC /* ConcurrencyExtras */; };
 		77CF3D082A995B3D001E05AE /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF3D072A995B3D001E05AE /* Basics.swift */; };
 		77CF3D0A2A995CC8001E05AE /* GetRandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF3D092A995CC8001E05AE /* GetRandomUser.swift */; };
 		77CF3D0C2A996A6E001E05AE /* AsyncStream-Unfolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF3D0B2A996A6E001E05AE /* AsyncStream-Unfolding.swift */; };
@@ -63,6 +66,8 @@
 		7778E4502A9D16F300B056DF /* GetFactNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFactNumber.swift; sourceTree = "<group>"; };
 		7778E4532A9D1A8B00B056DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		777B79042A9A629300995864 /* AsyncStreamURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamURL.swift; sourceTree = "<group>"; };
+		778696222AA2B3B1009B72EC /* TestingDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingDemoView.swift; sourceTree = "<group>"; };
+		778696252AA2B4D8009B72EC /* TestingDemoViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingDemoViewTest.swift; sourceTree = "<group>"; };
 		77CF3D072A995B3D001E05AE /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
 		77CF3D092A995CC8001E05AE /* GetRandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomUser.swift; sourceTree = "<group>"; };
 		77CF3D0B2A996A6E001E05AE /* AsyncStream-Unfolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncStream-Unfolding.swift"; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778696292AA2C1B2009B72EC /* ConcurrencyExtras in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +132,14 @@
 				7778E44B2A9CEC2300B056DF /* AsyncStream-Delegate.swift */,
 			);
 			path = "03-AsyncStream";
+			sourceTree = "<group>";
+		};
+		778696242AA2B469009B72EC /* 05-Testing */ = {
+			isa = PBXGroup;
+			children = (
+				778696222AA2B3B1009B72EC /* TestingDemoView.swift */,
+			);
+			path = "05-Testing";
 			sourceTree = "<group>";
 		};
 		77CF3D052A994ADB001E05AE /* 04-Actor */ = {
@@ -174,6 +188,7 @@
 				7778E44D2A9D163000B056DF /* 02-StructuredConcurrency */,
 				7778E4542A9D1FE900B056DF /* 03-AsyncStream */,
 				77CF3D052A994ADB001E05AE /* 04-Actor */,
+				778696242AA2B469009B72EC /* 05-Testing */,
 				77008E922AA13FB600EF0C34 /* FetchApiExamples */,
 				77F57B7B2A94144300852C88 /* SwiftConcurrencyDemoApp.swift */,
 				77F57B7D2A94144300852C88 /* RootView.swift */,
@@ -202,6 +217,7 @@
 				77476B7B2A95131B00BA0EF1 /* ActorTests.swift */,
 				771D935E2A952208004C4DA3 /* ActorCollectionTests.swift */,
 				77753DAF2A9508F500C30F16 /* TaskPriority+Random.swift */,
+				778696252AA2B4D8009B72EC /* TestingDemoViewTest.swift */,
 			);
 			path = SwiftConcurrencyDemoTests;
 			sourceTree = "<group>";
@@ -222,6 +238,9 @@
 			dependencies = (
 			);
 			name = SwiftConcurrencyDemo;
+			packageProductDependencies = (
+				778696282AA2C1B2009B72EC /* ConcurrencyExtras */,
+			);
 			productName = ActorDemo;
 			productReference = 77F57B782A94144300852C88 /* SwiftConcurrencyDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +291,9 @@
 				Base,
 			);
 			mainGroup = 77F57B6F2A94144300852C88;
+			packageReferences = (
+				778696272AA2C1B2009B72EC /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */,
+			);
 			productRefGroup = 77F57B792A94144300852C88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,6 +346,7 @@
 				77CF3D082A995B3D001E05AE /* Basics.swift in Sources */,
 				77F57BA72A9415A400852C88 /* MutableClass.swift in Sources */,
 				77F57B7E2A94144300852C88 /* RootView.swift in Sources */,
+				778696232AA2B3B1009B72EC /* TestingDemoView.swift in Sources */,
 				77F57B7C2A94144300852C88 /* SwiftConcurrencyDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778696262AA2B4D8009B72EC /* TestingDemoViewTest.swift in Sources */,
 				77476B7C2A95131B00BA0EF1 /* ActorTests.swift in Sources */,
 				77F57B8E2A94144500852C88 /* MutableClassTests.swift in Sources */,
 				771D935F2A952208004C4DA3 /* ActorCollectionTests.swift in Sources */,
@@ -622,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		778696272AA2C1B2009B72EC /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-concurrency-extras.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		778696282AA2C1B2009B72EC /* ConcurrencyExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 778696272AA2C1B2009B72EC /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */;
+			productName = ConcurrencyExtras;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77F57B702A94144300852C88 /* Project object */;
 }
