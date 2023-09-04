@@ -22,14 +22,24 @@ final class TestingDemoViewTest: XCTestCase {
 
     let sut = TestingDemoModel(fetchRandomUser: { mock })
 
+    // 1. Wrap into a Task
     let task = Task {
       await sut.getRandomUser()
     }
+
+    // 2. Wait for it
     await Task.yield()
+
+    // 3. Check condition Before run Task
     XCTAssertTrue(sut.isRequestingUser)
+
+    // 4. Optional, in this case because I'm handling cancellation
     await sut.userTask?.value
+
+    // 5. Wait for task result
     await task.value
 
+    // 6. Assert for expected results
     XCTAssertEqual(sut.user, .init(id: 1, name: "name", email: "aa@mail"))
     XCTAssertFalse(sut.isRequestingUser)
   }
