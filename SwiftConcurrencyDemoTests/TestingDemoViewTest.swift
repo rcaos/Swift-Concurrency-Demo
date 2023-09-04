@@ -14,7 +14,7 @@ final class TestingDemoViewTest: XCTestCase {
     }
   }
 
-  func testExample() async {
+  func test_When_Waiting_For_Task_should_Be_Loading() async {
     let mock = FetchRandomUser(execute: { request in
       // 0. It's necessary this yield?
       //await Task.yield()
@@ -42,6 +42,30 @@ final class TestingDemoViewTest: XCTestCase {
 
     // 6. Assert for expected results
     XCTAssertEqual(sut.user, .init(id: 1, name: "name", email: "aa@mail"))
+    XCTAssertFalse(sut.isRequestingUser)
+  }
+
+  func test_When_Task_Doesnt_Return_and_User_Cancel_Then_Task_Must_Cancel() async {
+
+    let mock = FetchRandomUser(execute: { request in
+      return .init(id: 1, name: "name", email: "aa@mail")
+    })
+
+    let sut = TestingDemoModel(fetchRandomUser: { mock })
+
+    let task = Task {
+      await sut.getRandomUser()
+    }
+
+    await Task.yield()
+    XCTAssertTrue(sut.isRequestingUser)
+
+    sut.cancel()
+
+    await sut.userTask?.value
+    await task.value
+
+    XCTAssertNil(sut.user)
     XCTAssertFalse(sut.isRequestingUser)
   }
 }

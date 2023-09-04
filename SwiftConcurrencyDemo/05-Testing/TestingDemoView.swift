@@ -80,6 +80,7 @@ struct TestingDemoView: View {
     userTask?.cancel()
     userTask = nil
     user = nil
+    isRequestingUser = false
   }
 
   deinit {
