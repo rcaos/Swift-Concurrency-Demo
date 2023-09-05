@@ -1,9 +1,9 @@
-This repository contains a collection of tiny examples that demonstrate the new concurrency features introduced in the Swift programming language starting from Swift 5.5 in 2021. 
+This repository contains a variety of examples, each focusing on different aspects of Swift's concurrency features.
 
 These examples are designed to help you understand and utilize Swift's concurrency APIs effectively.
 
 ## Examples
-The repository contains a variety of examples, each focusing on different aspects of Swift's concurrency features. Some of the examples you'll find include:
+Some of the examples you'll find include:
 
 - Use built in apis like URLSession
 - Convert your callbacks (completion handlers) to async-await
@@ -24,12 +24,12 @@ The repository contains a variety of examples, each focusing on different aspect
 1. Xcode 15.0 beta 8 (15A5229m)
 
 ## Sources:
-https://developer.apple.com/videos/play/wwdc2021/10132
+[Meet async/await in Swift](https://developer.apple.com/videos/play/wwdc2021/10132)
 
-https://developer.apple.com/videos/play/wwdc2021/10058
+[Meet AsyncSequence](https://developer.apple.com/videos/play/wwdc2021/10058)
 
-https://developer.apple.com/videos/play/wwdc2021/10133
+[Protect mutable state with Swift actors](https://developer.apple.com/videos/play/wwdc2021/10133)
 
-https://developer.apple.com/videos/play/wwdc2021/10134
+[Explore structured concurrency in Swift](https://developer.apple.com/videos/play/wwdc2021/10134)
 
-Testing: https://github.com/pointfreeco/swift-concurrency-extras
+Reliably Testing: https://github.com/pointfreeco/swift-concurrency-extras
